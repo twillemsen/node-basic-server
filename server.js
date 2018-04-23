@@ -40,12 +40,12 @@ app.use((err, req, res, next) => {
 	console.log('Catch-all error handler was called.')
 	console.log(err)
 
-	res.status(404).json(err).end()	
+	res.status(404).json(err).end()
 })
 
 const port = process.env.PORT || 3000
 
-app.listen(3000, () => {
+app.listen(port, () => {
 	console.log('De server draait op port ' + port)
 })
 
