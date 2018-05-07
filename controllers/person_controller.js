@@ -2,6 +2,7 @@
 // CRUD operaties op person
 //
 let Person = require('../model/Person')
+const assert = require('assert')
 
 let personlist = []
 
@@ -9,6 +10,10 @@ module.exports = {
 
     createPerson(req, res, next) {
         console.log('personcontroller.createPerson')
+
+        assert(req.body.firstname, 'firstname must be provided');
+        assert(req.body.lastname, 'lastname must be provided');
+
         const firstname = req.body.firstname
         const lastname = req.body.lastname
         console.log("We got " + firstname + " " + lastname)
@@ -29,7 +34,7 @@ module.exports = {
         res.status(200).json(user).end();
     },
     
-    deletePerson(req, res, next) {
+    deletePersonById(req, res, next) {
         // vind de juiste person om te deleten
         const id = req.params.id
         console.log('deletePerson id = ' + id)

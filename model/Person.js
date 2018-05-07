@@ -3,12 +3,12 @@
 class Person {
 
     constructor(firstname, lastname){
-        this._firstname = firstname;
-        this._lastname = lastname;
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     getfirstname(){
-        return this._firstname;
+        return this.firstname;
     }
 }
 
