@@ -9,7 +9,7 @@ let personlist = []
 module.exports = {
 
     createPerson(req, res, next) {
-        console.log('personcontroller.createPerson')
+        console.log('personcontroller.createPerson called');
 
         assert(req.body.firstname, 'firstname must be provided');
         assert(req.body.lastname, 'lastname must be provided');
