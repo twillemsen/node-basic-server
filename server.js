@@ -1,13 +1,13 @@
-const express = require('express')
-const morgan = require('morgan')
-const bodyParser = require('body-parser')
-const person_routes = require('./routes/person_routes')
+const express = require('express');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const person_routes = require('./routes/person_routes');
 const ApiError = require('./model/ApiError');
 const auth_routes = require('./routes/auth_routes');
 const AuthController = require('./controllers/authetication.contoller');
 const config = require('./config');
 
-let app = express()
+let app = express();
 
 // bodyParser zorgt dat we de body uit een request kunnen gebruiken,
 app.use(bodyParser.json());
